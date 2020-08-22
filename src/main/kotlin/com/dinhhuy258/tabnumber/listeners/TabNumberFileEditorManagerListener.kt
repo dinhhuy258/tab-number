@@ -1,6 +1,6 @@
 package com.dinhhuy258.tabnumber.listeners
 
-import com.dinhhuy258.tabnumber.constants.TabNumberConstants
+import com.dinhhuy258.tabnumber.settings.TabNumberSettingState
 import com.intellij.openapi.fileEditor.FileEditorManager
 import com.intellij.openapi.fileEditor.FileEditorManagerListener
 import com.intellij.openapi.fileEditor.ex.FileEditorManagerEx
@@ -11,6 +11,8 @@ import com.intellij.ui.tabs.JBTabs
 import com.intellij.ui.tabs.TabsListener
 
 class TabNumberFileEditorManagerListener(project: Project) : FileEditorManagerListener {
+    private val tabNumberSettingState: TabNumberSettingState = TabNumberSettingState.getInstance()
+
     private val fileEditorManagerEx: FileEditorManagerEx = FileEditorManagerEx.getInstanceEx(project)
 
     private lateinit var editorWindow: EditorWindow
@@ -40,7 +42,7 @@ class TabNumberFileEditorManagerListener(project: Project) : FileEditorManagerLi
 
         val files: Array<VirtualFile> = editorWindow.files
         for (index in files.indices) {
-            openedJBTabs.getTabAt(index).text = (index + 1).toString() + TabNumberConstants.TAB_DELIMITER + files[index].presentableName
+            openedJBTabs.getTabAt(index).text = (index + 1).toString() + tabNumberSettingState.tabNumberSeparator + files[index].presentableName
         }
     }
 }

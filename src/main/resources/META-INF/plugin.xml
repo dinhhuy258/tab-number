@@ -16,6 +16,11 @@
         <!-- Add your extensions here -->
         <editorTabTitleProvider implementation="com.dinhhuy258.tabnumber.providers.TabNumberEditorTabTitleProvider"/>
         <postStartupActivity implementation="com.dinhhuy258.tabnumber.startup.TabNumberStartupActivity"/>
+
+        <applicationConfigurable parentId="editor" instance="com.dinhhuy258.tabnumber.settings.TabNumberSettingConfigurable"
+                                 id="com.dinhhuy258.tabnumber.settings.TabNumberSettingConfigurable"
+                                 displayName="Tab Number"/>
+        <applicationService serviceImplementation="com.dinhhuy258.tabnumber.settings.TabNumberSettingState"/>
     </extensions>
 
     <actions>
