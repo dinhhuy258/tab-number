@@ -1,8 +1,8 @@
 <idea-plugin>
     <id>com.dinhhuy258.tabnumber.tab-number</id>
-    <name>TabNumber</name>
+    <name>Tab Number</name>
     <version>1.0</version>
-    <vendor email="huy.duongdinh@gmail.com" url="https://github.com/dinhhuy258/tab-number">TabNumber</vendor>
+    <vendor email="huy.duongdinh@gmail.com" url="https://github.com/dinhhuy258/tab-number">Huy Duong</vendor>
 
     <description><![CDATA[
         A Intellij plugin for displaying tab number
