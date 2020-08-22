@@ -1,11 +1,11 @@
 <idea-plugin>
     <id>com.dinhhuy258.tabnumber.tab-number</id>
-    <name>Plugin display name here</name>
-    <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
+    <name>TabNumber</name>
+    <version>1.0</version>
+    <vendor email="huy.duongdinh@gmail.com" url="https://github.com/dinhhuy258/tab-number">TabNumber</vendor>
 
     <description><![CDATA[
-    Enter short description for your plugin here.<br>
-    <em>most HTML tags may be used</em>
+        A Intellij plugin for displaying tab number
     ]]></description>
 
     <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
@@ -14,6 +14,8 @@
 
     <extensions defaultExtensionNs="com.intellij">
         <!-- Add your extensions here -->
+        <editorTabTitleProvider implementation="com.dinhhuy258.tabnumber.providers.TabNumberEditorTabTitleProvider"/>
+        <postStartupActivity implementation="com.dinhhuy258.tabnumber.startup.TabNumberStartupActivity"/>
     </extensions>
 
     <actions>
