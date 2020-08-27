@@ -31,7 +31,7 @@ class TabNumberFileEditorManagerListener(project: Project) : FileEditorManagerLi
         if (!this::editorWindow.isInitialized || !this::openedJBTabs.isInitialized) {
             val currentWindow = fileEditorManagerEx.currentWindow ?: return
             editorWindow = currentWindow
-            val tabbedPane = editorWindow.tabbedPane
+            val tabbedPane = editorWindow.tabbedPane ?: return
             openedJBTabs = tabbedPane.tabs
             openedJBTabs.addListener(object : TabsListener {
                 override fun tabsMoved() {
