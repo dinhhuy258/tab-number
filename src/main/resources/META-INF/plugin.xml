@@ -1,12 +1,13 @@
 <idea-plugin>
     <id>com.dinhhuy258.tabnumber.tab-number</id>
     <name>Tab Number</name>
-    <version>1.0</version>
+    <version>1.0.0</version>
     <vendor email="huy.duongdinh@gmail.com" url="https://github.com/dinhhuy258/tab-number">Huy Duong</vendor>
 
     <description><![CDATA[
         A Intellij plugin for displaying tab number
     ]]></description>
+    <idea-version since-build="192"/>
 
     <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
          on how to target different products -->
