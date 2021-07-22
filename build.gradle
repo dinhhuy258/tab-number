@@ -5,7 +5,7 @@ plugins {
 }
 
 group 'com.dinhhuy258.tabnumber'
-version '1.0.0'
+version '1.0.1'
 
 repositories {
     mavenCentral()
