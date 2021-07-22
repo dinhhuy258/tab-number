@@ -14,7 +14,7 @@ class TabNumberEditorTabTitleProvider : EditorTabTitleProvider {
     @Nullable
     override fun getEditorTabTitle(project: Project, file: VirtualFile): String? {
         val fileEditorManagerEx = FileEditorManagerEx.getInstanceEx(project)
-        val currentWindow: EditorWindow = fileEditorManagerEx.currentWindow
+        val currentWindow: EditorWindow = fileEditorManagerEx.currentWindow ?: return null
         val files = currentWindow.files
         for (index in files.indices) {
             if (files[index] == file) {
